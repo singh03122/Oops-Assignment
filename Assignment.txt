@@ -1,0 +1,124 @@
+Q1.How to Create an Object in Java ?
+
+Ans :- Define a Class: First, you need to define a class. A class is a blueprint for creating objects.
+
+
+ program to define object:- 
+    
+ public class Person {
+    // Fields (or attributes)
+    String name;
+    int age;
+
+    // Constructor
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Method
+    public void introduce() {
+        System.out.println("Hi, my name is " + name + " and I am " + age + " years old.");
+    }
+}
+
+Q2. What is the use of a new keyword in Java ?
+
+Ans:- the new keyword is used to create new objects. Here’s a quick rundown of its uses:
+
+Instantiate a Class: new allocates memory for a new object and calls the constructor of the class.
+
+syntax :- 
+         Person person = new Person("Alice", 30);
+
+Q3.What are the different types of variables in Java ?
+
+Ans :- variables are categorized based on their scope, lifecycle, and where they are declared. Here’s a breakdown of the different types of variables:
+
+Local Variables:
+
+Definition: Declared inside a method, constructor, or block.
+Scope: Limited to the method, constructor, or block in which they are declared.
+Lifecycle: Created when the method, constructor, or block is executed and destroyed when it finishes.
+
+public void someMethod() {
+    int localVar = 10; // localVar is a local variable
+}
+Instance Variables (or Non-static Fields):
+
+Definition: Declared inside a class but outside any method or constructor.
+Scope: Available to all methods and constructors in the class.
+Lifecycle: Created when an instance of the class is created and destroyed when the instance is destroyed.
+
+public class Person {
+    String name; // instance variable
+    int age; // instance variable
+}
+Static Variables (or Class Variables):
+
+Definition: Declared with the static keyword inside a class.
+Scope: Shared among all instances of the class.
+Lifecycle: Created when the class is first loaded and destroyed when the class is unloaded.
+
+Q4.What is the difference between Instance variable and Local variables ?
+
+Ans:- The primary differences between instance variables and local variables in Java are related to their scope, lifecycle, and how they are used within a class. Here’s a detailed comparison:
+
+Instance Variables
+Declaration:
+
+Declared inside a class but outside any method or constructor.
+
+public class Person {
+    String name; // instance variable
+    int age;     // instance variable
+}
+Scope:
+
+Accessible from all methods, constructors, and blocks within the class.
+
+Local Variables
+Declaration:
+
+Declared within a method, constructor, or block.
+
+public void someMethod() {
+    int localVar = 10; // local variable
+}
+Scope:
+
+Accessible only within the method, constructor, or block where they are declared.
+
+Q5.In which area memory is allocated for instance variable and local variable ?
+
+Ans:- memory for variables is allocated in different areas based on their type:
+
+Instance Variables
+Memory Area: Heap
+Details: Instance variables are stored in the heap memory. The heap is the area of memory used for dynamic memory allocation, and it is where objects and their associated instance variables are allocated. Each time you create a new object using the new keyword, memory for that object and its instance variables is allocated in the heap.
+Local Variables
+Memory Area: Stack
+Details: Local variables are stored in the stack memory. The stack is used for static memory allocation, where method calls, local variables, and method call frames are managed. When a method is invoked, a new stack frame is created for that method, and local variables are allocated within that frame. When the method execution is complete, the stack frame is removed, and the memory for the local variables is reclaimed.
+
+Q6.What is method overloading ?
+
+Ans:- Method overloading in Java is a feature that allows a class to have more than one method with the same name, but with different parameters. It helps in creating methods that perform similar tasks but with different input arguments.
+
+ program of it:- 
+public class MathOperations {
+    // Method with two integer parameters
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // Overloaded method with three integer parameters
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Overloaded method with two double parameters
+    public double add(double a, double b) {
+        return a + b;
+    }
+}
+
